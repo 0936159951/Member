@@ -1,0 +1,447 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>{$caption CME}</h1>
+<span>
+{BEGIN page_number}
+{mlang_message PAGE1} {$pageno} {mlang_message PAGE2} {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN RecordDate_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN RecordDate_fieldheader}
+	<b>{$label CME RecordDate}</b>
+	{END RecordDate_fieldheader}
+</th>
+{END RecordDate_fieldheadercolumn}
+	{BEGIN MemberID_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN MemberID_fieldheader}
+	<b>{$label CME MemberID}</b>
+	{END MemberID_fieldheader}
+</th>
+{END MemberID_fieldheadercolumn}
+	{BEGIN DateStart_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DateStart_fieldheader}
+	<b>{$label CME DateStart}</b>
+	{END DateStart_fieldheader}
+</th>
+{END DateStart_fieldheadercolumn}
+	{BEGIN DateEnd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DateEnd_fieldheader}
+	<b>{$label CME DateEnd}</b>
+	{END DateEnd_fieldheader}
+</th>
+{END DateEnd_fieldheadercolumn}
+	{BEGIN TimeStart_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN TimeStart_fieldheader}
+	<b>{$label CME TimeStart}</b>
+	{END TimeStart_fieldheader}
+</th>
+{END TimeStart_fieldheadercolumn}
+	{BEGIN TimeEnd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN TimeEnd_fieldheader}
+	<b>{$label CME TimeEnd}</b>
+	{END TimeEnd_fieldheader}
+</th>
+{END TimeEnd_fieldheadercolumn}
+	{BEGIN Hour_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Hour_fieldheader}
+	<b>{$label CME Hour}</b>
+	{END Hour_fieldheader}
+</th>
+{END Hour_fieldheadercolumn}
+	{BEGIN Category_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Category_fieldheader}
+	<b>{$label CME Category}</b>
+	{END Category_fieldheader}
+</th>
+{END Category_fieldheadercolumn}
+	{BEGIN CreditOld_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CreditOld_fieldheader}
+	<b>{$label CME CreditOld}</b>
+	{END CreditOld_fieldheader}
+</th>
+{END CreditOld_fieldheadercolumn}
+	{BEGIN CreditAN_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CreditAN_fieldheader}
+	<b>{$label CME CreditAN}</b>
+	{END CreditAN_fieldheader}
+</th>
+{END CreditAN_fieldheadercolumn}
+	{BEGIN CreditCritical_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CreditCritical_fieldheader}
+	<b>{$label CME CreditCritical}</b>
+	{END CreditCritical_fieldheader}
+</th>
+{END CreditCritical_fieldheadercolumn}
+	{BEGIN CreditSpecial_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CreditSpecial_fieldheader}
+	<b>{$label CME CreditSpecial}</b>
+	{END CreditSpecial_fieldheader}
+</th>
+{END CreditSpecial_fieldheadercolumn}
+	{BEGIN Title_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Title_fieldheader}
+	<b>{$label CME Title}</b>
+	{END Title_fieldheader}
+</th>
+{END Title_fieldheadercolumn}
+	{BEGIN Remark_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Remark_fieldheader}
+	<b>{$label CME Remark}</b>
+	{END Remark_fieldheader}
+</th>
+{END Remark_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN RecordDate_fieldcolumn}
+<td  class="runner-cc {$RecordDate_class}" {$RecordDate_style}>
+	{$RecordDate_value}
+</td>
+{END RecordDate_fieldcolumn}
+	{BEGIN MemberID_fieldcolumn}
+<td  class="runner-cc {$MemberID_class}" {$MemberID_style}>
+	{$MemberID_value}
+</td>
+{END MemberID_fieldcolumn}
+	{BEGIN DateStart_fieldcolumn}
+<td  class="runner-cc {$DateStart_class}" {$DateStart_style}>
+	{$DateStart_value}
+</td>
+{END DateStart_fieldcolumn}
+	{BEGIN DateEnd_fieldcolumn}
+<td  class="runner-cc {$DateEnd_class}" {$DateEnd_style}>
+	{$DateEnd_value}
+</td>
+{END DateEnd_fieldcolumn}
+	{BEGIN TimeStart_fieldcolumn}
+<td  class="runner-cc {$TimeStart_class}" {$TimeStart_style}>
+	{$TimeStart_value}
+</td>
+{END TimeStart_fieldcolumn}
+	{BEGIN TimeEnd_fieldcolumn}
+<td  class="runner-cc {$TimeEnd_class}" {$TimeEnd_style}>
+	{$TimeEnd_value}
+</td>
+{END TimeEnd_fieldcolumn}
+	{BEGIN Hour_fieldcolumn}
+<td  class="runner-cc {$Hour_class}" {$Hour_style}>
+	{$Hour_value}
+</td>
+{END Hour_fieldcolumn}
+	{BEGIN Category_fieldcolumn}
+<td  class="runner-cc {$Category_class}" {$Category_style}>
+	{$Category_value}
+</td>
+{END Category_fieldcolumn}
+	{BEGIN CreditOld_fieldcolumn}
+<td  class="runner-cc {$CreditOld_class}" {$CreditOld_style}>
+	{$CreditOld_value}
+</td>
+{END CreditOld_fieldcolumn}
+	{BEGIN CreditAN_fieldcolumn}
+<td  class="runner-cc {$CreditAN_class}" {$CreditAN_style}>
+	{$CreditAN_value}
+</td>
+{END CreditAN_fieldcolumn}
+	{BEGIN CreditCritical_fieldcolumn}
+<td  class="runner-cc {$CreditCritical_class}" {$CreditCritical_style}>
+	{$CreditCritical_value}
+</td>
+{END CreditCritical_fieldcolumn}
+	{BEGIN CreditSpecial_fieldcolumn}
+<td  class="runner-cc {$CreditSpecial_class}" {$CreditSpecial_style}>
+	{$CreditSpecial_value}
+</td>
+{END CreditSpecial_fieldcolumn}
+	{BEGIN Title_fieldcolumn}
+<td  class="runner-cc {$Title_class}" {$Title_style}>
+	{$Title_value}
+</td>
+{END Title_fieldcolumn}
+	{BEGIN Remark_fieldcolumn}
+<td  class="runner-cc {$Remark_class}" {$Remark_style}>
+	{$Remark_value}
+</td>
+{END Remark_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+																		{BEGIN totals_row}
+								<tr class="runner-row style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN totals_record}
+										{BEGIN RecordDate_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END RecordDate_fieldfootercolumn}
+	{BEGIN MemberID_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END MemberID_fieldfootercolumn}
+	{BEGIN DateStart_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DateStart_fieldfootercolumn}
+	{BEGIN DateEnd_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DateEnd_fieldfootercolumn}
+	{BEGIN TimeStart_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END TimeStart_fieldfootercolumn}
+	{BEGIN TimeEnd_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END TimeEnd_fieldfootercolumn}
+	{BEGIN Hour_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END Hour_fieldfootercolumn}
+	{BEGIN Category_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END Category_fieldfootercolumn}
+	{BEGIN CreditOld_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END CreditOld_fieldfootercolumn}
+	{BEGIN CreditAN_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+	{BEGIN CreditAN_showtotal}
+			{mlang_message TOTAL}:
+	{$CreditAN_total}
+	{END CreditAN_showtotal}
+</td>
+{END CreditAN_fieldfootercolumn}
+	{BEGIN CreditCritical_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+	{BEGIN CreditCritical_showtotal}
+			{mlang_message TOTAL}:
+	{$CreditCritical_total}
+	{END CreditCritical_showtotal}
+</td>
+{END CreditCritical_fieldfootercolumn}
+	{BEGIN CreditSpecial_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+	{BEGIN CreditSpecial_showtotal}
+			{mlang_message TOTAL}:
+	{$CreditSpecial_total}
+	{END CreditSpecial_showtotal}
+</td>
+{END CreditSpecial_fieldfootercolumn}
+	{BEGIN Title_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END Title_fieldfootercolumn}
+	{BEGIN Remark_fieldfootercolumn}
+<td class="runner-cc runner-bc runner-clast">
+</td>
+{END Remark_fieldfootercolumn}
+
+									{END totals_record}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+								{END totals_row}
+
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN RecordDate_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END RecordDate_fieldfootercolumn}
+{BEGIN MemberID_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END MemberID_fieldfootercolumn}
+{BEGIN DateStart_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DateStart_fieldfootercolumn}
+{BEGIN DateEnd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DateEnd_fieldfootercolumn}
+{BEGIN TimeStart_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END TimeStart_fieldfootercolumn}
+{BEGIN TimeEnd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END TimeEnd_fieldfootercolumn}
+{BEGIN Hour_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Hour_fieldfootercolumn}
+{BEGIN Category_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Category_fieldfootercolumn}
+{BEGIN CreditOld_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CreditOld_fieldfootercolumn}
+{BEGIN CreditAN_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CreditAN_fieldfootercolumn}
+{BEGIN CreditCritical_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CreditCritical_fieldfootercolumn}
+{BEGIN CreditSpecial_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CreditSpecial_fieldfootercolumn}
+{BEGIN Title_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Title_fieldfootercolumn}
+{BEGIN Remark_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Remark_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,304 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" colspan=2><div  class="runner-b-viewheader {$brickclass_viewheader}">{$caption CME}, {mlang_message VIEW_RECORD} [
+{$label CME ID}: {$show_key1}
+]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+
+	{BEGIN RecordDate_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_RecordDate {$fielddispclass_RecordDate}">
+			<b>{$label CME RecordDate}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_RecordDate {$fielddispclass_RecordDate}">
+			{$RecordDate_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END RecordDate_fieldblock}
+	{BEGIN MemberID_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_MemberID {$fielddispclass_MemberID}">
+			<b>{$label CME MemberID}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_MemberID {$fielddispclass_MemberID}">
+			{$MemberID_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END MemberID_fieldblock}
+	{BEGIN DateStart_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_DateStart {$fielddispclass_DateStart}">
+			<b>{$label CME DateStart}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_DateStart {$fielddispclass_DateStart}">
+			{$DateStart_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END DateStart_fieldblock}
+	{BEGIN DateEnd_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_DateEnd {$fielddispclass_DateEnd}">
+			<b>{$label CME DateEnd}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_DateEnd {$fielddispclass_DateEnd}">
+			{$DateEnd_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END DateEnd_fieldblock}
+	{BEGIN TimeStart_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_TimeStart {$fielddispclass_TimeStart}">
+			<b>{$label CME TimeStart}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_TimeStart {$fielddispclass_TimeStart}">
+			{$TimeStart_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END TimeStart_fieldblock}
+	{BEGIN TimeEnd_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_TimeEnd {$fielddispclass_TimeEnd}">
+			<b>{$label CME TimeEnd}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_TimeEnd {$fielddispclass_TimeEnd}">
+			{$TimeEnd_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END TimeEnd_fieldblock}
+	{BEGIN Hour_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_Hour {$fielddispclass_Hour}">
+			<b>{$label CME Hour}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_Hour {$fielddispclass_Hour}">
+			{$Hour_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Hour_fieldblock}
+	{BEGIN Category_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_Category {$fielddispclass_Category}">
+			<b>{$label CME Category}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_Category {$fielddispclass_Category}">
+			{$Category_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Category_fieldblock}
+	{BEGIN CreditOld_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_CreditOld {$fielddispclass_CreditOld}">
+			<b>{$label CME CreditOld}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_CreditOld {$fielddispclass_CreditOld}">
+			{$CreditOld_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END CreditOld_fieldblock}
+	{BEGIN CreditAN_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_CreditAN {$fielddispclass_CreditAN}">
+			<b>{$label CME CreditAN}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_CreditAN {$fielddispclass_CreditAN}">
+			{$CreditAN_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END CreditAN_fieldblock}
+	{BEGIN CreditCritical_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_CreditCritical {$fielddispclass_CreditCritical}">
+			<b>{$label CME CreditCritical}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_CreditCritical {$fielddispclass_CreditCritical}">
+			{$CreditCritical_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END CreditCritical_fieldblock}
+	{BEGIN CreditSpecial_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_CreditSpecial {$fielddispclass_CreditSpecial}">
+			<b>{$label CME CreditSpecial}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_CreditSpecial {$fielddispclass_CreditSpecial}">
+			{$CreditSpecial_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END CreditSpecial_fieldblock}
+	{BEGIN Title_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_Title {$fielddispclass_Title}">
+			<b>{$label CME Title}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_Title {$fielddispclass_Title}">
+			{$Title_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Title_fieldblock}
+	{BEGIN Remark_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_Remark {$fielddispclass_Remark}">
+			<b>{$label CME Remark}</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_Remark {$fielddispclass_Remark}">
+			{$Remark_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Remark_fieldblock}
+
+
+
+
+<tr  class="runner-row style2 runner-b-viewbuttons {$brickclass_viewbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN prev_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+</span>
+{END prev_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</a>
+</span>
+{END back_button}
+{BEGIN next_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+</span>
+{END next_button}
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>
